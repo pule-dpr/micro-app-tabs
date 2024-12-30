@@ -1,0 +1,28 @@
+/* 调整外边框 */
+.tox-tinymce {
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+// 全屏模式防止基座菜单遮挡
+.tox-tinymce.tox-fullscreen {
+    z-index: 10000;
+}
+
+/* 调整工具栏样式 */
+.tox-editor-container .tox-editor-header {
+    box-shadow: 0px 3px 5px rgb(0 0 0 / 5%) !important;
+}
+
+/* 调整菜单弹窗层级 */
+.tox-tinymce-aux {
+    position: fixed !important; // 解决挂载在基座下后由于父级overflow:hidden导致组件内各类菜单被裁切的问题
+    z-index: 10000 !important;
+}
+// 优化菜单样式
+.tox-collection__item-label {
+    white-space: nowrap !important;
+}
+.tox .tox-toolbar,
+.tox .tox-toolbar .tox-toolbar__group {
+    flex-wrap: nowrap !important;
+}

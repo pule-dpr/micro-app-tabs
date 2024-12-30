@@ -1,0 +1,87 @@
+{
+  "name": "app1",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "bootstrap": "pnpm i && pnpm serve",
+    "build": "vue-cli-service build --mode dev",
+    "serve": "vue-cli-service serve --mode dev",
+    "tree": "treee -L 5 -I \"node_modules|.idea|.git|.vscode|.husky|dist|websit\" -a --dirs-first"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint --cache --fix --ext .js,.vue ",
+    "package.json": [
+      "sort-package-json",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "endOfLine": "crlf",
+    "insertFianlNewLine": true,
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "useTabs": true
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "@icon-park/svg": "^1.3.5",
+    "@vueuse/core": "^7.7.0",
+    "babel-loader": "8.2.4",
+    "core-js": "^3.6.5",
+    "crypto-js": "4.1.1",
+    "currency.js": "^2.0.4",
+    "dayjs": "^1.10.8",
+    "echarts": "^5.3.1",
+    "element-plus": "2.7.2",
+    "vue": "^3.4.27",
+    "vue-router": "^4.1.5",
+    "vuex": "^4.0.0-0"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-export-default-from": "^7.16.7",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@vue/cli-plugin-babel": "~4.5.15",
+    "@vue/cli-plugin-eslint": "~4.5.15",
+    "@vue/cli-plugin-router": "~4.5.15",
+    "@vue/cli-plugin-vuex": "~4.5.15",
+    "@vue/cli-service": "~4.5.15",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "commitizen": "^4.2.4",
+    "commitlint-config-cz": "^0.13.3",
+    "compression-webpack-plugin": "5.0.1",
+    "conventional-changelog-cli": "^2.2.2",
+    "conventional-changelog-custom-config": "^0.3.1",
+    "cz-customizable": "^6.3.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.0.0",
+    "esno": "^0.14.1",
+    "husky": "6.0.0",
+    "lint-staged": "^12.3.7",
+    "prettier": "^2.2.1",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "signale": "^1.4.0",
+    "sort-package-json": "^1.55.0",
+    "treee": "^0.1.0"
+  },
+  "volta": {
+    "node": "16.16.0"
+  },
+  "hooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+  },
+  "publicPath": "/app3/"
+}

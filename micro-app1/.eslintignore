@@ -1,0 +1,11 @@
+.idea
+.vscode
+node_modules/
+dist/
+libs/
+*.json
+*。md
+*env.*
+*.zip
+output.js
+*.Map/index.vue

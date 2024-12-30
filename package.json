@@ -1,0 +1,43 @@
+{
+  "name": "micro-app-tabs",
+  "version": "1.0.0",
+  "description": "micro-app-tabs 案例",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "start": "pnpm --filter \"*\" --workspace-concurrency 4 start",
+    "build": "pnpm --filter \"*\" --workspace-concurrency 4 build",
+    "install:micro-base": "cd micro-base && pnpm i",
+    "install:micro-app1": "cd micro-app1 && pnpm i",
+    "install:micro-app2": "cd micro-app2 && pnpm i",
+    "install:micro-app3": "cd micro-app3 && pnpm i",
+    "dev-base:micro-base": "cd micro-base && pnpm run dev",
+    "dev-child:micro-app1": "cd micro-app1 && pnpm run dev",
+    "dev-child:micro-app2": "cd micro-app2 && pnpm run dev",
+    "dev-child:micro-app3": "cd micro-app3 && pnpm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micro-zoe/micro-app-demo.git"
+  },
+  "keywords": [
+    "micro-app",
+    "demo"
+  ],
+  "author": "micro-zoe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/micro-zoe/micro-app-demo/issues"
+  },
+  "homepage": "https://github.com/micro-zoe/micro-app-demo#readme",
+  "dependencies": {
+    "@micro-zoe/micro-app": "latest"
+  },
+  "devDependencies": {
+    "cross-env": "~7.0.3",
+    "express": "~4.17.1",
+    "npm-run-all": "~4.1.5"
+  }
+}

@@ -1,0 +1,14 @@
+.idea
+.vscode
+node_modules/
+dist/
+libs/
+*.json
+*。md
+*env.*
+*.zip
+output.js
+md-loader/
+src/views/dashbord/index.vue
+*.Map/index.vue
+.eslintcache

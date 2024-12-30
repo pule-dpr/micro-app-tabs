@@ -1,0 +1,3 @@
+packages:
+  # 所有在 / 下的 package
+  - '**'
