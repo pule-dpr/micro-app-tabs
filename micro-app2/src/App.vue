@@ -1,9 +1,10 @@
 <template>
-	<router-view></router-view>
+	<KeepAliveLayout/>
 </template>
 <script setup>
 import router from '@/router'
 import { onMounted } from 'vue'
+import KeepAliveLayout from './components/keepAliveLayout/main.vue'
 import { useRouter, useRoute } from 'vue-router'
 const PUBLIC_PATH = require('../package.json').publicPath.slice(1, -1)
 const [{ replace, push }, route] = [useRouter(), useRoute()]

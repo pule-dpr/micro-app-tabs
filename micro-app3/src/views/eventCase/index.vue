@@ -1,33 +1,10 @@
 <template>
 	<div class="header">事件案例</div>
 	<div class="content">
-		<p><span>场景：</span>此页面在子应用app2中，入口菜单可放置任意子应用下，不同入口下页签不同。</p>
-		<p><span>实现：</span>通过菜单配置项来决定，最小单位的菜单所属应用使用rebusi配置项来决定，若无rebusi字段，则取父菜单的appName。</p>
-		<pre><span>示例：</span>如子应用app1的菜单配置项为
-
-			{
-				appName: 'app1',
-				title: '子应用app1',
-				icon: 'el-icon-cloudy',
-				children: [
-					{
-						title: '设计实现（app1）',
-						pageName: 'designImplementation',
-						permission: 'ATC_MENU_PLATFORM'
-					},
-					{
-						title: '问题发现解决（app1）',
-						pageName: 'problemSolving',
-						permission: 'ATC_MENU_PLATFORM'
-					},
-					{
-						title: '菜单案例',
-						rebusi: 'app2',
-						pageName: 'specificCase',
-						permission: 'STAFF'
-					}
-				]
-			}
+		<p><span>场景：</span>AppTab提供常用操作的事件，如编辑页编辑成功后自动关闭当前窗口并跳转至列表页</p>
+		<p><span>实现：</span>基座AppTab中统一实现，挂载到全局</p>
+		<pre><span>示例：</span>
+			
 		</pre>
 	</div>
 </template>

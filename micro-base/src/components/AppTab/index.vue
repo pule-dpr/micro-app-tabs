@@ -172,13 +172,12 @@ function changeTabPageByClick(page) {
 		//跳转兜底：由于同步tabList数据是子应用先处理完路由再同步主路由，再根据主路由获取的，会出现一种情况，点击菜单，子应用还没处理完，还没来得及同步主应用路由，就进入了其他新页面，会导致hashPath没有值
 		if(page.location.params.hashPath){
 			//改子应用路由,子路由守卫会同步主应用
-			microApp.router.push({ name: realAppName, path,hash })
+			microApp.router.push({ name: realAppName, path:page.location.params.hashPath })
 		}else{
 			router.push({ name: 'microAppRoot', params: { appName:realAppName, pageName:page.location.params.pageName } })
 		}
 	} else {
 		//使用fullPath，为了不触发主应用路由改变后，tab替换而导致的再次点击找不到params中hashPath，的问题。
-		console.log(page.location.fullPath,'changeTabPageByClick')
 		router.push({ path,hash, params: { pageName: page.location.params.pageName } })
 	}
 }
