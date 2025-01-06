@@ -9,6 +9,24 @@ const router = [
 		component: () => import(/* webpackChunkName: "demand" */ '@/views/designImplementation/index.vue')
 	},
 	{
+		path: '/microDetails',
+		name: 'microDetails',
+		meta: {
+			title: '微前端架构详情',
+			hideInMenu: true
+		},
+		component: () => import(/* webpackChunkName: 'task' */ '@/views/designImplementation/microDetails.vue')
+	},
+	{
+		path: '/appTabsDetails',
+		name: 'appTabsDetails',
+		meta: {
+			title: '多页签组件详情',
+			hideInMenu: true
+		},
+		component: () => import(/* webpackChunkName: 'task' */ '@/views/designImplementation/appTabsDetails.vue')
+	},
+	{
 		path: '/problemSolving/index',
 		name: 'problemSolving',
 		meta: {

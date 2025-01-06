@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "start": "pnpm --filter \"*\" --workspace-concurrency 4 start",
+    "start": "pnpm --filter \"*\" --workspace-concurrency 4 dev",
     "build": "pnpm --filter \"*\" --workspace-concurrency 4 build",
     "install:micro-base": "cd micro-base && pnpm i",
     "install:micro-app1": "cd micro-app1 && pnpm i",

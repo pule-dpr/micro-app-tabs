@@ -1,5 +1,5 @@
 <template>
-	<div class="header">问题解决</div>
+	<div class="header">页签（AppTabs）设计</div>
 	<div class="content">
 		<p><span>场景：</span>此页面在子应用app2中，入口菜单可放置任意子应用下，不同入口下页签不同。</p>
 		<p><span>实现：</span>通过菜单配置项来决定，最小单位的菜单所属应用使用rebusi配置项来决定，若无rebusi字段，则取父菜单的appName。</p>

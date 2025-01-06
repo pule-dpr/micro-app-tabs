@@ -8,12 +8,12 @@ const allMenuTree = [
 		icon: 'el-icon-cloudy',
 		children: [
 			{
-				title: '设计实现（app1）',
+				title: '设计实现',
 				pageName: 'designImplementation',
 				permission: 'ATC_MENU_PLATFORM'
 			},
 			{
-				title: '问题发现解决（app1）',
+				title: '问题发现解决',
 				pageName: 'problemSolving',
 				permission: 'ATC_MENU_PLATFORM'
 			},

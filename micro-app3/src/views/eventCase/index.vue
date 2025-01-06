@@ -3,9 +3,9 @@
 	<div class="content">
 		<p><span>场景：</span>AppTab提供常用操作的事件，如编辑页编辑成功后自动关闭当前窗口并跳转至列表页</p>
 		<p><span>实现：</span>基座AppTab中统一实现，挂载到全局</p>
-		<pre><span>示例：</span>
-			
-		</pre>
+		<p><span>示例：</span></p>
+		<p><span>双键页签：</span></p>
+		<p><span>：</span></p>
 	</div>
 </template>
 

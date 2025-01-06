@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "bootstrap": "pnpm i && pnpm serve",
+    "bootstrap": "pnpm i && pnpm dev",
     "build": "vue-cli-service build --mode dev",
-    "serve": "vue-cli-service serve --mode dev",
+    "dev": "vue-cli-service serve --mode dev",
     "tree": "treee -L 5 -I \"node_modules|.idea|.git|.vscode|.husky|dist|websit\" -a --dirs-first"
   },
   "lint-staged": {
