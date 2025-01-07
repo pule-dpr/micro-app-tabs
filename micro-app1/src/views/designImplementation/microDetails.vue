@@ -1,14 +1,29 @@
 <template>
 	<div class="header">微前端架构详情</div>
 	<div class="content">
+		<p><span>主要原理：</span></p>
+		<div class="case-card">
+			<p><span>准则一：</span>通过类似TCP三次握手原理，保持并维护主子应用的路由统一，基座中tabList内最终每个页签对象中路径值，主路由（history），子应用路由（hash），三者一致</p>
+			<p><span>准则二：</span>通过利用路由特性：相同路由不跳转，结束每一次链路</p>
+			<p><span>准则三：</span>同时也仅有一个子应用处于被激活状态，已激活后进入另一个子应用时，该子应用推入后台（microApp框架内置）</p>
+			<p><span>准则四：</span>页面跳转总共两种方式：<span>方式一：</span>（使用microApp框架中虚拟路由主改子的方式）<span>方式二：</span>（基座路由发生改变触发datachange，子应用监听接收信息后，在子应用内部replace子路由）</p>
+			<p><span>准则五：</span>已激活子应用（预设菜单《a》，未预设菜单《b》），未激活子应用（预设菜单《c》，未预设菜单《d》）四种页面类型，进入a,b,d三种类型时始终使用方式一，只有进入c类型时使用方式二</p>
+		</div>
 		<p><span>总设计图：</span></p>
-		<p><span>主要原理：</span>通过菜单配置项来决定，最小单位的菜单所属应用使用rebusi配置项来决定，若无rebusi字段，则取父菜单的appName。</p>
+		<el-image
+			style="width: 100%; height: 600px"
+			:src="require('../../assets/dashboad/all-design.png')"
+			:zoom-rate="1.2"
+			:max-scale="7"
+			:min-scale="0.2"
+			:preview-src-list="[require('../../assets/dashboad/all-design.png')]"
+			:initial-index="4"
+			fit="contain"/>
 		<p><span>场景解析：此demo中几乎包含了所有可能出现的业务场景，我将会把此demo中所有场景一一列举，并解析流程</span></p>
-
 		<div class="case-card" v-for="(item,index) in sensList" :key="index">
 			<p><span>场景{{index + 1}}：</span>{{item.sens}}</p>
 			<p><span>示例：</span>{{ item.case }}</p>
-			<p><span>原理：</span>{{ item.theory }}</p>
+			<p><span>原理链路：</span>{{ item.待补充 }}</p>
 		</div>
 	</div>
 </template>
@@ -22,37 +37,42 @@ const sensList = [
 	{
 		sens:'通过点击菜单列表进入非激活状态子应用下的页面',
 		case:'点击菜单列表下子应用app1中的（设计实现）',
-		theory:'theory'
+		待补充:'待补充'
 	},
 	{
 		sens:'通过点击菜单列表进入已激活子应用下的页面',
 		case:'点击菜单列表下子应用app1中的（设计实现）后，再次点击（问题发现解决）',
-		theory:'theory'
+		待补充:'待补充'
 	},
 	{
 		sens:'通过点击子应用页面中按钮，进入详情页',
 		case:'点击菜单列表下子应用app1中的（设计实现），点击按钮（基于microApp框架详细设计）',
-		theory:'theory'
+		待补充:'待补充'
 	},
 	{
 		sens:'通过点击页签进入未激活子应用的预设菜单页面',
-		case:'点击菜单列表下子应用app1中的（设计实现）',
-		theory:'theory'
+		case:'点击菜单列表下子应用app1中的（设计实现），点击菜单列表下子应用app2中的（保活案例），点击页签（设计实现）',
+		待补充:'待补充'
 	},
 	{
 		sens:'通过点击页签进入已激活子应用的预设菜单页面',
-		case:'点击菜单列表下子应用app1中的（设计实现）',
-		theory:'theory'
+		case:'点击菜单列表下子应用app1中的（设计实现），点击菜单列表下子应用app1中的（问题发现解决），点击页签（设计实现）',
+		待补充:'待补充'
 	},
 	{
 		sens:'通过点击页签进入已激活子应用的未预设菜单（详情）页面',
-		case:'点击菜单列表下子应用app1中的（设计实现）',
-		theory:'theory'
+		case:'点击菜单列表下子应用app1中的（设计实现），点击按钮（基于microApp框架详细设计），点击菜单列表下子应用app1中的（问题发现解决），点击页签（基于microApp框架详细设计）',
+		待补充:'待补充'
 	},
 	{
 		sens:'通过点击页签进入未激活子应用的未预设菜单（详情）页面',
-		case:'点击菜单列表下子应用app1中的（设计实现）',
-		theory:'theory'
+		case:'点击菜单列表下子应用app1中的（设计实现），点击按钮（基于microApp框架详细设计），点击菜单列表下子应用app2中的（保活案例），点击页签（基于microApp框架详细设计）',
+		待补充:'待补充'
+	},
+	{
+		sens:'通过点击子应用页面中按钮跳转',
+		case:'跳转案例',
+		待补充:'待补充'
 	}
 ]
 
@@ -72,6 +92,13 @@ const sensList = [
 	font-weight:500;
 	span{
 		color:#e96900;
+	}
+	.case-card{
+		border-radius: 16px;
+		background: #f9f9f9;
+		border: 1px solid #ccc;
+		padding: 32px;
+		margin: 8px 0;
 	}
 }
 </style>
