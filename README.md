@@ -35,7 +35,7 @@ pnpm i
 **1、启动 主应用 以及 所有子应用**
 
 ```bash
-pnpm run dev
+pnpm run start
 ```
 
 访问：`http://localhost:6070/micro-base`
