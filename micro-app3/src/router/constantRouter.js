@@ -18,6 +18,15 @@ const router = [
 		component: () => import(/* webpackChunkName: "task" */ '@/views/jumpCase/index.vue')
 	},
 	{
+		path: '/appJumpCase/index',
+		name: 'appJumpCase',
+		meta: {
+			title: '跨应用跳转案例',
+			keepAlive: true
+		},
+		component: () => import(/* webpackChunkName: "task" */ '@/views/appJumpCase/index.vue')
+	},
+	{
 		path: '/:pathMatch(.*)*', // 工作台默认为登录后首页
 		name: '404', // 具名路由导航使用  全局注册的时候检测是否唯一 有重复给出对应的提示信息
 		component: () => import(/* webpackChunkName: "PageNotFound" */ '@/views/PageNotFound'), // 基础布局

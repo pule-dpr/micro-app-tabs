@@ -1,7 +1,7 @@
 const router = [
 	{
 		path: '/',
-		redirect: '/busi/base/baseApp'
+		redirect: '/busi/app1/designImplementation'
 	},
 	{
 		path: '/busi/:appName?/:pageName?',

@@ -107,7 +107,7 @@ module.exports = {
 			})
 			.plugin('html')
 			.tap(args => {
-				args[0].title = '安居广厦-房产互联网平台'
+				args[0].title = '基于微前端的多页签框架'
 				return args
 			})
 	},
@@ -134,7 +134,7 @@ module.exports = {
 	},
 	devServer: {
 		host: '0.0.0.0',
-		port: 9527,
+		port: 6070,
 		injectClient: false,
 		open: true,
 		headers: {

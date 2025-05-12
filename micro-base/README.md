@@ -1,4 +1,4 @@
-# 安居广厦微前端基座 
+# 微前端基座 
 
 powered by [@micro-zoe/micro-app](https://zeroing.jd.com/micro-app/)
 

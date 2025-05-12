@@ -12,19 +12,16 @@
 				children: [
 					{
 						title: '设计实现（app1）',
-						pageName: 'designImplementation',
-						permission: 'ATC_MENU_PLATFORM'
+						pageName: 'designImplementation'
 					},
 					{
 						title: '问题发现解决（app1）',
-						pageName: 'problemSolving',
-						permission: 'ATC_MENU_PLATFORM'
+						pageName: 'problemSolving'
 					},
 					{
 						title: '菜单案例',
 						rebusi: 'app2',
-						pageName: 'specificCase',
-						permission: 'STAFF'
+						pageName: 'specificCase'
 					}
 				]
 			}

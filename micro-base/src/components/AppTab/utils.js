@@ -5,11 +5,9 @@ export function findAuthExtByLocation(_location, appName) {
 	const item = allAppMenuList?.find(v => v.pageName === _location.params.pageName && appName===v.appName) || {}
 	let title = item?.title || _location.params.title
 	title = title || findTitleByPathname(_location.parmas.pageName)
-
 	return {
 		icon: item?.icon,
 		title
-		// title: title || (Config.app[appName] ? Config.app[appName].name : "404 Not Found"),
 	}
 }
 

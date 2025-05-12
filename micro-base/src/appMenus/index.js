@@ -9,19 +9,16 @@ const allMenuTree = [
 		children: [
 			{
 				title: '设计实现',
-				pageName: 'designImplementation',
-				permission: 'ATC_MENU_PLATFORM'
+				pageName: 'designImplementation'
 			},
 			{
 				title: '问题发现解决',
-				pageName: 'problemSolving',
-				permission: 'ATC_MENU_PLATFORM'
+				pageName: 'problemSolving'
 			},
 			{
 				title: '菜单案例',
 				rebusi: 'app2',
-				pageName: 'specificCase',
-				permission: 'STAFF'
+				pageName: 'specificCase'
 			}
 		]
 	},
@@ -32,13 +29,11 @@ const allMenuTree = [
 		children: [
 			{
 				title: '菜单案例',
-				pageName: 'specificCase',
-				permission: 'STAFF'
+				pageName: 'specificCase'
 			},
 			{
 				title: '保活案例',
-				pageName: 'keepAliveCase',
-				permission: ['MANAGER', 'TMP_TM_PERFORMANCE_DEP_ADMIN_ASSESSMENT']
+				pageName: 'keepAliveCase'
 			}
 		]
 	},
@@ -49,13 +44,15 @@ const allMenuTree = [
 		children: [
 			{
 				title: '事件案例',
-				pageName: 'eventCase',
-				permission: 'STAFF'
+				pageName: 'eventCase'
 			},
 			{
 				title: '跳转案例',
 				pageName: 'jumpCase',
-				permission: ['MANAGER', 'TMP_TM_PERFORMANCE_DEP_ADMIN_ASSESSMENT']
+			},
+			{
+				title: '跨应用跳转案例',
+				pageName: 'appJumpCase',
 			}
 		]
 	}

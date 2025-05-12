@@ -106,6 +106,23 @@ const lifeCycles = {
 	datachange(event) {
 		const data = event?.detail?.data
 		console.log('datachange', data)
+		if (typeof data !== 'object') return
+		const { type, detail } = data
+		// 处理跨应用间跳转（A应用->B应用）
+		//可以在A应用任何地方使用以下代码进行跨应用跳转到B
+		// window.microApp.dispatch({
+		// 	type:'NAV', 这是自定义的参数，用于区别消息的类型以便于进行不同处理，这里NAV代表跳转类型消息
+		// 	detail:{appName:'B',pageName:'BPage'},
+		// 	params:{},
+		//  query:{}
+		// })
+		if (type === 'NAV' && typeof detail === 'object') {
+			const appName = detail.appName
+			const pageName = detail.pageName
+			router.push({ name: 'microAppRoot', params: { appName, pageName } })
+			micro.setData(appName, { name: pageName, params: detail.params, query: detail.query })
+			return
+		}
 	},
 	beforemount(event) {
 		console.log('beforemount', event)
