@@ -36,15 +36,6 @@ const router = [
 		component: () => import(/* webpackChunkName: "task" */ '@/views/problemSolving/index.vue')
 	},
 	{
-		path: '/problemSolvingDetails/:id',
-		name: 'problemSolvingDetails',
-		meta: {
-			title: '问题详情',
-			hideInMenu: true
-		},
-		component: () => import(/* webpackChunkName: 'task' */ '@/views/problemSolving/details.vue')
-	},
-	{
 		path: '/:pathMatch(.*)*', // 工作台默认为登录后首页
 		name: '404', // 具名路由导航使用  全局注册的时候检测是否唯一 有重复给出对应的提示信息
 		component: () => import(/* webpackChunkName: "PageNotFound" */ '@/views/PageNotFound'), // 基础布局
